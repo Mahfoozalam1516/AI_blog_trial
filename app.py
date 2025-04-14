@@ -74,7 +74,7 @@ def humanize_chunk(chunk, api_key=None):
 
         task_id = submit_data['data']['task_id']
 
-        max_attempts = 10
+        max_attempts = 40
         for _ in range(max_attempts):
             time.sleep(2)
             obtain_response = requests.get(OBTAIN_URL, params={"task_id": task_id}, headers=headers)
